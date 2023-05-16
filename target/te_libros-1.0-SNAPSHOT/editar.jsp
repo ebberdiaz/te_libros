@@ -1,6 +1,6 @@
 <%@page import ="com.emergentes.modelo.Libro"%>
 <%
- Libro lib = (Libro)request.getAttribute("lib");
+    Libro lib = (Libro) request.getAttribute("lib");
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,9 +28,10 @@
                 </tr>
                 <td>  </td>
                 <td> <input type="submit" ></td>
+               
             </table>
-
             
         </form>
+
     </body>
 </html>

@@ -60,6 +60,7 @@ public class MainController extends HttpServlet {
              Libro li = new Libro();
              request.setAttribute("lib", li);
              request.getRequestDispatcher("editar.jsp").forward(request,response);
+             response.sendRedirect("MainController");
         }
         if(op.equals("eliminar")){
             // eliminar registro
@@ -110,7 +111,7 @@ public class MainController extends HttpServlet {
                 
                 ps.executeUpdate();
             } 
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("MainController");
         } catch (SQLException ex) {
             System.out.println("Error de SQL" + ex.getMessage());
         }
